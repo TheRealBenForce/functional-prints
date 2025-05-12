@@ -1,0 +1,13 @@
+{
+    "fileFormatVersion": "1",
+    "parameterSets": {
+        "New set 1": {
+            "BASE_HEIGHT": "50",
+            "ENABLE_HOOK_NICE": "true",
+            "ENABLE_SMOOTH_EDGES": "true",
+            "HOOK_ROTATION": "0",
+            "HOOK_SIZE_H": "30",
+            "HOOK_SIZE_V": "20"
+        }
+    }
+}
