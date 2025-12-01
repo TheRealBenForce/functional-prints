@@ -66,3 +66,13 @@ difference() {
 translate([outer_wheel_diam * 1.2, 0, 0]) {
 outer_tube();
 }
+
+// Version of the wheel without the outer tube cutaway
+translate([outer_wheel_diam * 2.5, 0, 0]) {
+wheel(diam=inner_wheel_diam, hole_diam=inner_hole_diam, thickness=inner_wheel_thickness);
+
+// Outer wheel with optional bottom chamfer
+difference() {
+  wheel(diam=outer_wheel_diam + outer_wheel_thickness, hole_diam=outer_hole_diam, thickness=outer_wheel_thickness, chamfer_bottom=true);
+  spoke_cutout(5 + outer_wheel_thickness, 1, 12);
+  }}
