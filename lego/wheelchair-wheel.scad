@@ -3,12 +3,12 @@ include <BOSL2/std.scad>;
 
 // Parameters
 inner_wheel_diam = 8  ; // Diameter of the wheel
-inner_hole_diam = 6;   // Diameter of the hole
-inner_wheel_thickness = 1.8; // Thickness of the wheel
+inner_hole_diam = 5;   // Diameter of the hole
+inner_wheel_thickness = 3; // Thickness of the wheel
 
-outer_wheel_diam = 20  ; // Diameter of the wheel
+outer_wheel_diam = 19  ; // Diameter of the wheel
 outer_hole_diam = inner_hole_diam + 1;   // Diameter of the hole
-outer_wheel_thickness = 1.4; // Thickness of the wheel
+outer_wheel_thickness = 2.5; // Thickness of the wheel
 
 $fn = 64; // Set high resolution for smooth circles
 
@@ -31,7 +31,7 @@ module outer_tube() {
         or=(outer_wheel_diam / 2) + .5, // Corrected to use radius
         ir=(outer_wheel_diam / 2) - .5, // Corrected to use radius
         center=false,
-        rounding=0.08, // Chamfer the top edge
+        rounding=0.2 // Chamfer the top edge
     );
 }
 
@@ -52,7 +52,6 @@ module spoke_cutout(h, w, num_spokes) {
 wheel(diam=inner_wheel_diam, hole_diam=inner_hole_diam, thickness=inner_wheel_thickness);
 
 // Outer wheel with optional bottom chamfer
-
 difference() {
   wheel(diam=outer_wheel_diam, hole_diam=outer_hole_diam, thickness=outer_wheel_thickness, chamfer_bottom=true);
   spoke_cutout(5, 1, 18);
