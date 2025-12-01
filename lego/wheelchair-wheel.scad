@@ -4,11 +4,11 @@ include <BOSL2/std.scad>;
 // Parameters
 inner_wheel_diam = 8  ; // Diameter of the wheel
 inner_hole_diam = 5;   // Diameter of the hole
-inner_wheel_thickness = 3; // Thickness of the wheel
+inner_wheel_thickness = 2; // Thickness of the wheel
 
-outer_wheel_diam = 19  ; // Diameter of the wheel
+outer_wheel_diam = 17; // Diameter of the wheel
 outer_hole_diam = inner_hole_diam + 1;   // Diameter of the hole
-outer_wheel_thickness = 2.5; // Thickness of the wheel
+outer_wheel_thickness = 1.5; // Thickness of the wheel
 
 $fn = 64; // Set high resolution for smooth circles
 
